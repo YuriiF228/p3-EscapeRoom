@@ -1,0 +1,13 @@
+body{
+    background-image: url('../images/homepagina/wild-west-dynasty-k2ybw.jpg') !important;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+.time-bg{
+    height: 300px;
+    background: #fff;
+    opacity: 0.8;
+    border-radius: 15px;
+    z-index: -1;
+}
