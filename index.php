@@ -50,25 +50,51 @@
                     </div>
 
                     <div class="aboutGame-Block">
-
+                        
                     </div>
 
-                    <div class="rules-Block">
-
+                    <div class="rules-Block d-flex justify-content-around align-items-center mt-5 mb-5">
+                        <div class="roomOne-rules">
+                            <ul>
+                                <li>rule one</li>
+                                <li>rule two</li>
+                                <li>rule</li>
+                                <li>rule</li>
+                                <li>rule</li>
+                            </ul>
+                        </div>
+                        <div class="roomTwo-rules">
+                            <ul>
+                                <li>rule one</li>
+                                <li>rule two</li>
+                                <li>rule</li>
+                                <li>rule</li>
+                                <li>rule</li>
+                            </ul>
+                        </div>
+                        <div class="roomThree-rules">
+                            <ul>
+                                <li>rule</li>
+                                <li>rule two</li>
+                                <li>rule</li>
+                                <li>rule</li>
+                                <li>rule</li>
+                            </ul>
+                        </div>
                     </div>
                     <div class="w-75 m-auto creators-Block d-flex justify-content-evenly">
                         <ul>
-                            <li>Raf</li>
+                            <li class="ls-none">Raf</li>
                             <li>Github</li>
                             <li>+31 6 12 34 56</li>
                         </ul>
                         <ul>
-                            <li>Danila</li>
+                            <li class="ls-none">Danila</li>
                             <li>Github</li>
                             <li>+31 6 12 34 56</li>
                         </ul>
                         <ul>
-                            <li>Yurii</li>
+                            <li class="ls-none">Yurii</li>
                             <li>Github</li>
                             <li>Linkedin</li>
                         </ul>
