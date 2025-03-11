@@ -7,7 +7,7 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      background-color: #f4f4f9;
+      background-color:rgb(142, 142, 147);
       margin: 0;
       padding: 20px;
       box-sizing: border-box;
@@ -16,7 +16,7 @@
     .container {
       max-width: 600px;
       margin: 20px auto;
-      background-color: #ffffff;
+      background-color:rgb(255, 255, 255);
       padding: 20px;
       border-radius: 8px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
