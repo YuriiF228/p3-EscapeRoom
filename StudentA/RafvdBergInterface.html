@@ -4,9 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="rafstyle.css">
+    <link rel="stylesheet" href="rafspel.css">
 </head>
 <body>
+
+    <div class="container">
+        <div class="box" onclick="checkBox(1)">1</div>
+        <div class="box" onclick="checkBox(2)">2</div>
+        <div class="box" onclick="checkBox(3)">3</div>
+        <div class="box" onclick="checkBox(4)">4</div>
+        <div class="box" onclick="checkBox(5)">5</div>
+        <div class="box" onclick="checkBox(6)">6</div>
+    </div>
+
+    <script>
+        function checkBox(number) {
+            if (number === 5) {
+                window.location.href = "https://voorbeeldpagina.nl"; // Vervang met de gewenste URL
+            } else {
+                alert("Kies de vijfde doos om door te gaan!");
+            }
+        }
+    </script>
     
 </body>
 </html>
