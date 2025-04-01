@@ -8,8 +8,7 @@
 </head>
 <body>
     <form method="post" action="teaminsert.php">
-        <label for="teamname">Noem jouw team</label><br>
-        <input type="text" name="teamname" required>
+        Teamnaam: <input type="text" name="teamname" required>
         <br><br>
 
         <input type="submit" value="Verzenden">
