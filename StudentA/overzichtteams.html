@@ -33,5 +33,40 @@
             <td>45:34</td>
         </tr>
     </table>
+
+    <?php
+    require_once "dbconnect.php";
+        try{
+            $sQuery = "SELECT * FROM teams";
+            $oStmt = $db->prepare(query: $sQuery);
+            $oStmt->execute();
+        
+            if ($oStmt->rowCount()> 0) {
+                echo "<table>";
+                echo "<thead>";
+                echo "<td>id</td>";
+                echo "<td>teamnaam</td>";
+                echo "<td>score</td>";
+                echo "<td>tijd</td>";
+                echo "</thead>";
+                while($aRow = $oStmt->fetch(PDO::FETCH_ASSOC))
+                {
+                    echo '<tr>';
+                    echo '<td>'.$aRow['id'].'</td>';
+                    echo '<td>'.$aRow['teamnaam'].'</td>';
+                    echo '<td>'.$aRow['score'].'</td>';
+                    echo '<td>'.$aRow['tijd'].'</td>';
+                    echo '</tr>';
+                }
+                echo "</table>";
+            } 
+            else 
+            {
+                echo "Geen gegevens gevonden";
+            }
+        }
+        catch(PDOException $e)
+        {}
+    ?>
 </body>
 </html>
