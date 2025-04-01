@@ -23,7 +23,7 @@
     <script>
         function checkBox(number) {
             if (number === 5) {
-                window.location.href = "puzzletwoRaf.php";
+                window.location.href = "";
             } else {
                 alert("Kies de vijfde doos.");
             }

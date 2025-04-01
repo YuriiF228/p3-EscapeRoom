@@ -26,3 +26,8 @@ body {
 .box:hover {
     background-color: #ff6600;
 }
+.scene2 {
+    background: url('images/homepagina/lose.png') no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+}
