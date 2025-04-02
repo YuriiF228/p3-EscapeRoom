@@ -19,6 +19,8 @@
                 echo "<thead>";
                 echo "<td>team_ID</td>";
                 echo "<td>name</td>";
+                echo "<td>lid 1</td>";
+                echo "<td>lid 2</td>";
                 echo "<td>score</td>";
                 echo "<td>tijd</td>";
                 echo "</thead>";
@@ -27,6 +29,8 @@
                     echo '<tr>';
                     echo '<td>'.$aRow['team_ID'].'</td>';
                     echo '<td>'.$aRow['name'].'</td>';
+                    echo '<td>'.$aRow['lid1'].'</td>';
+                    echo '<td>'.$aRow['lid2'].'</td>';
                     echo '<td>'.$aRow['score'].'</td>';
                     echo '<td>'.$aRow['time'].'</td>';
                     echo '</tr>';
