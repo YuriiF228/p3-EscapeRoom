@@ -1,19 +1,15 @@
 <?php
-try
-{
-    $db = new PDO(dsn: 'mysql:host=localhost;dbname=phpvoorbeelden', username: 'root', password: '');
-}
+$servername = "localhost";
+$username = "root";  // Adjust accordingly
+$password = "";      // Adjust accordingly
+$database = "phpvoorbeelden";  // Change this to your database name
 
-catch(PDOException $e)
-{
-    $sMsg = '<p>
-            Regelnummer: '.$e->getLine().'<br />
-            Bestand: '.$e->getFile().'<br />
-            Foutmelding: '.$e->getMessage().'
-        </p>';
+// Create a new database connection
+$db = new mysqli($servername, $username, $password, $database);
 
-    trigger_error(message: $sMsg);
-    die();
+// Check the connection
+if ($db->connect_error) {
+    die("Connection failed: " . $db->connect_error);
 }
 
 ?>

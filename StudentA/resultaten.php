@@ -1,58 +1,50 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="rafspel.css">
+    <title>Scene Switch Timer</title>
     <style>
-        .gray-box {
-            width: 300px;
-            height: 150px;
-            background-color: gray;
-            color: white;
+        body {
+            font-family: Arial, sans-serif;
             text-align: center;
-            line-height: 150px;
-            font-size: 20px;
-            border-radius: 10px;
-            position: absolute;
-            top: 0; 
-            left: 0;
-            margin: 10px;
+            transition: background-color 1s ease-in-out;
+            margin-top: 50px;
+            background-color: lightblue; /* Eerste scene */
+            color: black;
+        }
+        .scene2 {
+            background: url('images/homepagina/lose.png') no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+        }
+        #timer {
+            font-size: 2em;
+            font-weight: bold;
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px 15px;
+            font-size: 1em;
+            cursor: pointer;
         }
     </style>
 </head>
 <body>
-    <div class="gray-box">
-        <?php
-            include "teamnaamshow.php";
-        ?>
-    </div>
 
-    <div class="container">
-        <div class="box" onclick="checkBox(1)">1</div>
-        <div class="box" onclick="checkBox(2)">2</div>
-        <div class="box" onclick="checkBox(3)">3</div>
-        <div class="box" onclick="checkBox(4)">4</div>
-        <div class="box" onclick="checkBox(5)">5</div>
-        <div class="box" onclick="checkBox(6)">6</div>
-    </div>
+    <h1>Scene Switch Timer</h1>
+    <p>De scène verandert na 60 seconden!</p>
+    <div id="timer">0</div>
+    
+    <button onclick="resetTimer()">Reset Timer</button>
 
     <script>
-        function checkBox(number) {
-            if (number === 5) {
-                window.location.href = "resultaten.php";
-            } else {
-                alert("Kies de vijfde doos.");
-            }
-        }
-
         let timerRunning = true;
 
         function updateTimer() {
             if (!timerRunning) return; // Stop de functie als de timer gestopt is
 
-            fetch("./timer.php")
+            fetch("timer.php")
                 .then(response => response.json())
                 .then(data => {
                     document.getElementById("timer").innerText = data.time + " seconden";
@@ -66,7 +58,7 @@
         }
 
         function resetTimer() {
-            fetch("./reset.php").then(() => {
+            fetch("reset.php").then(() => {
                 timerRunning = true; // Zet de timer weer aan
                 updateTimer();
             });
@@ -83,6 +75,6 @@
 
         updateTimer();
     </script>
-    
+
 </body>
 </html>

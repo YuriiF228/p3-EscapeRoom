@@ -7,55 +7,28 @@
     <link rel="stylesheet" href="rafstyle.css">
 </head>
 <body>
-    <table>
-        <tr>
-            <th>TeamID</th>
-            <th>Teamnaam</th>
-            <th>Score</th>
-            <th>Tijd</th>
-        </tr>
-        <tr>
-            <td>1</td>
-            <td>Naam 1</td>
-            <td>220</td>
-            <td>48:12</td>
-        </tr>
-        <tr>
-            <td>2</td>
-            <td>Cool naam 2</td>
-            <td>200</td>
-            <td>50:46</td>
-        </tr>
-        <tr>
-            <td>3</td>
-            <td>Beter naam 3</td>
-            <td>250</td>
-            <td>45:34</td>
-        </tr>
-    </table>
-
     <?php
-    require_once "dbconnect.php";
+    require_once "dbconnectraf.php";
         try{
-            $sQuery = "SELECT * FROM teams";
+            $sQuery = "SELECT * FROM teamnames";
             $oStmt = $db->prepare(query: $sQuery);
             $oStmt->execute();
         
             if ($oStmt->rowCount()> 0) {
                 echo "<table>";
                 echo "<thead>";
-                echo "<td>id</td>";
-                echo "<td>teamnaam</td>";
+                echo "<td>team_ID</td>";
+                echo "<td>name</td>";
                 echo "<td>score</td>";
                 echo "<td>tijd</td>";
                 echo "</thead>";
                 while($aRow = $oStmt->fetch(PDO::FETCH_ASSOC))
                 {
                     echo '<tr>';
-                    echo '<td>'.$aRow['id'].'</td>';
-                    echo '<td>'.$aRow['teamnaam'].'</td>';
+                    echo '<td>'.$aRow['team_ID'].'</td>';
+                    echo '<td>'.$aRow['name'].'</td>';
                     echo '<td>'.$aRow['score'].'</td>';
-                    echo '<td>'.$aRow['tijd'].'</td>';
+                    echo '<td>'.$aRow['time'].'</td>';
                     echo '</tr>';
                 }
                 echo "</table>";

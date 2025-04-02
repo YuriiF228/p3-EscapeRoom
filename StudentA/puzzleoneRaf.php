@@ -1,5 +1,3 @@
-<?php include 'teamnaamshow.php'; ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,9 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="rafspel.css">
+    <style>
+        .gray-box {
+            width: 300px;
+            height: 150px;
+            background-color: gray;
+            color: white;
+            text-align: center;
+            line-height: 150px;
+            font-size: 20px;
+            border-radius: 10px;
+            position: absolute;
+            top: 0; 
+            left: 0;
+            margin: 10px;
+        }
+    </style>
 </head>
 <body>
-    <p>Jouw team: <?php echo $_SESSION['team_name']; ?></p>
+    <div class="gray-box">
+        <?php
+            include "teamnaamshow.php";
+        ?>
+    </div>
 
     <div class="container">
         <div class="box" onclick="checkBox(1)">1</div>
