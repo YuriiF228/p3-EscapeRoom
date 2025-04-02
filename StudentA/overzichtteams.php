@@ -8,7 +8,7 @@
 </head>
 <body>
     <?php
-    require_once "dbconnectraf.php";
+    require_once "dbconnectoverzicht.php";
         try{
             $sQuery = "SELECT * FROM teamnames";
             $oStmt = $db->prepare(query: $sQuery);
