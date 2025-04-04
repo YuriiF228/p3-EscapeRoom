@@ -6,7 +6,7 @@ $tnaam = $_POST['teamname'];
 $tlid1 = $_POST['teamlid1'];
 $tlid2 = $_POST['teamlid2'];
 
-$sql = "INSERT INTO `teamnames`(`team_ID`, `name`, `lid1`, `lid2`, `score`, `time`) VALUES ('$tnaam', '$tlid1', '$tlid2', '0', '0')";
+$sql = "INSERT INTO `teamnames`(`name`, `lid1`, `lid2`, `score`, `time`) VALUES ('$tnaam', '$tlid1', '$tlid2', '0', '0')";
 
 if ($db->query($sql) === TRUE) {
     echo "Teamnaam klaar voor gebruik.";
