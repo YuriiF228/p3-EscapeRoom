@@ -23,6 +23,10 @@ body {
     font-size: 20px;
     cursor: pointer;
     border-radius: 8px;
+    background-image: url('../images/homepagina/barrel.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 .box:hover {
     background-color: #ff6600;

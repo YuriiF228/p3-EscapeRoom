@@ -43,14 +43,14 @@
             if (number === 5) {
                 window.location.href = "puzzletwoRaf.php";
             } else {
-                alert("Kies de vijfde doos.");
+                alert("Je vindt niets, het is de foute cask.");
             }
         }
 
         let timerRunning = true;
 
         function updateTimer() {
-            if (!timerRunning) return; // Stop de functie als de timer gestopt is
+            if (!timerRunning) return;
 
             fetch("timer.php")
                 .then(response => response.json())
@@ -59,7 +59,7 @@
 
                     if (data.time >= 60) {
                         document.body.classList.add("scene2");
-                        timerRunning = false; // Stop de updates
+                        timerRunning = false;
                     }
                 })
                 .catch(error => console.error("Fout bij ophalen timer:", error));
@@ -67,17 +67,16 @@
 
         function resetTimer() {
             fetch("reset.php").then(() => {
-                timerRunning = true; // Zet de timer weer aan
+                timerRunning = true;
                 updateTimer();
             });
         }
 
-        // Update de timer elke seconde totdat hij stopt
         let interval = setInterval(() => {
             if (timerRunning) {
                 updateTimer();
             } else {
-                clearInterval(interval); // Stop de interval zodra de timer stopt
+                clearInterval(interval);
             }
         }, 1000);
 
