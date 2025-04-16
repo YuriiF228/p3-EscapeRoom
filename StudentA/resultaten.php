@@ -14,7 +14,7 @@
             color: black;
         }
         .scene2 {
-            background: url('images/homepagina/lose.png') no-repeat center center fixed;
+            background: url('../images/homepagina/lose.png') no-repeat center center fixed;
             background-size: cover;
             color: white;
         }

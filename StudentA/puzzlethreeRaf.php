@@ -6,20 +6,33 @@
     <title>Document</title>
     <link rel="stylesheet" href="rafspel.css">
     <style>
-        .gray-box {
-            width: 300px;
-            height: 150px;
-            background-color: gray;
-            color: white;
-            text-align: center;
-            line-height: 150px;
-            font-size: 20px;
-            border-radius: 10px;
-            position: absolute;
-            top: 0; 
-            left: 0;
-            margin: 10px;
+        body {
+          font-family: sans-serif;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          margin-top: 40px;
         }
+        #puzzle {
+          display: grid;
+          grid-template-columns: repeat(3, 100px);
+          grid-template-rows: repeat(3, 100px);
+          gap: 2px;
+        }
+        .tile {
+          width: 100px;
+          height: 100px;
+          background-image: url('../images/homepagina/barrel.png');
+          background-size: 300px 300px;
+          cursor: pointer;
+          transition: transform 0.3s;
+        }
+        #message {
+          margin-top: 20px;
+          font-size: 1.2em;
+          color: green;
+        }
+
     </style>
 </head>
 <body>
@@ -29,24 +42,13 @@
         ?>
     </div>
 
-    <div class="container">
-        <div class="box" onclick="checkBox(1)">1</div>
-        <div class="box" onclick="checkBox(2)">2</div>
-        <div class="box" onclick="checkBox(3)">3</div>
-        <div class="box" onclick="checkBox(4)">4</div>
-        <div class="box" onclick="checkBox(5)">5</div>
-        <div class="box" onclick="checkBox(6)">6</div>
-    </div>
+    <h2>Rotating Puzzle</h2>
+    <div id="puzzle"></div>
+    <div id="message"></div>
 
-    <script>
-        function checkBox(number) {
-            if (number === 5) {
-                window.location.href = "puzzlethreeRaf.php";
-            } else {
-                alert("Kies de vijfde doos.");
-            }
-        }
+    <button id="nextBtn" onclick="goToNextPage()">Next →</button>
 
+    <script src="rotation.js">
         let timerRunning = true;
 
         function updateTimer() {
