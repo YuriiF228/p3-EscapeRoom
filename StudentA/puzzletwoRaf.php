@@ -23,29 +23,16 @@
     </style>
 </head>
 <body>
+    <div class="background"></div>
     <div class="gray-box">
         <?php
             include "teamnaamshow.php";
         ?>
     </div>
 
-    <div class="container">
-        <div class="box" onclick="checkBox(1)">1</div>
-        <div class="box" onclick="checkBox(2)">2</div>
-        <div class="box" onclick="checkBox(3)">3</div>
-        <div class="box" onclick="checkBox(4)">4</div>
-        <div class="box" onclick="checkBox(5)">5</div>
-        <div class="box" onclick="checkBox(6)">6</div>
-    </div>
+    <div class="maze" id="maze"></div>
 
-    <script>
-        function checkBox(number) {
-            if (number === 5) {
-                window.location.href = "puzzlethreeRaf.php";
-            } else {
-                alert("Kies de vijfde doos.");
-            }
-        }
+    <script src="maze.js">
 
         let timerRunning = true;
 

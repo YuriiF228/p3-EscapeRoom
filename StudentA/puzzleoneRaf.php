@@ -23,11 +23,19 @@
     </style>
 </head>
 <body>
+    <div class="background"></div>
     <div class="gray-box">
         <?php
             include "teamnaamshow.php";
         ?>
     </div>
+
+    <p>"Ik ben de tweede van links. We zitten allemaal in een cirkel.
+        <br>
+        Ik heb vrienden naast mij en zij hebben vrienden naast hun. Eén van ons heeft geen vrienden.
+        <br>
+        Wie is het?"
+    </p>
 
     <div class="container">
         <div class="box" onclick="checkBox(1)">1</div>

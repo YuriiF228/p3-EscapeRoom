@@ -36,6 +36,7 @@
     </style>
 </head>
 <body>
+    <div class="background"></div>
     <div class="gray-box">
         <?php
             include "teamnaamshow.php";
