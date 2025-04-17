@@ -24,7 +24,7 @@
                                 <a class="nav-link fs-5 active" aria-current="page" href="#">Home</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link fs-5" aria-current="page" href="#">Room 1</a>
+                                <a class="nav-link fs-5" aria-current="page" href="StudentA/teamregistratie.php">Room 1</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link fs-5" href="#">Room 2</a>

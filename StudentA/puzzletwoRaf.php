@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Room1</title>
     <link rel="stylesheet" href="rafspel.css">
     <style>
         .gray-box {
@@ -29,6 +29,11 @@
             include "teamnaamshow.php";
         ?>
     </div>
+
+    <p>De sleutel die je hebt gevonden werkt niet goed.
+        <br>
+        Forceer de deur te openen.
+    </p>
 
     <div class="maze" id="maze"></div>
 
